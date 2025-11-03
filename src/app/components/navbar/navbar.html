@@ -1,0 +1,55 @@
+<header
+  class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm"
+  [@expandNav]>
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <!-- Logo -->
+    <div class="text-2xl font-bold tracking-tight text-gray-800">
+      <span class="text-blue-600">Bit</span> PLC
+    </div>
+
+    <!-- Desktop Links -->
+    <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <li><a routerLink="/services" class="hover:text-blue-600 transition-colors">Services</a></li>
+      <li><a routerLink="/products" class="hover:text-blue-600 transition-colors">Products</a></li>
+      <li><a routerLink="/about" class="hover:text-blue-600 transition-colors">About Us</a></li>
+      <li><a routerLink="/contact" class="hover:text-blue-600 transition-colors">Contact Us</a></li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="md:hidden text-gray-800 focus:outline-none"
+      (click)="toggleMenu()">
+      @if(!isMenuOpen) {
+      <svg  xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      } @else {
+      <svg  xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    }
+    </button>
+  </nav>
+
+  <!-- Mobile Dropdown -->
+   @if (isMenuOpen) {
+  <div
+    class="md:hidden bg-white border-t border-gray-100 shadow-md">
+    <ul class="flex flex-col space-y-3 px-6 py-4 text-gray-700 font-medium">
+      <li><a routerLink="/about" class="hover:text-blue-600" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="/services" class="hover:text-blue-600" (click)="closeMenu()">Services</a></li>
+      <li><a routerLink="/products" class="hover:text-blue-600" (click)="closeMenu()">Products</a></li>
+      <li><a routerLink="/contact" class="hover:text-blue-600" (click)="closeMenu()">Contact Us</a></li>
+    </ul>
+  </div>
+  }
+</header>
+
