@@ -1,36 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'bit-navbar',
   templateUrl: './navbar.html',
-  animations: [
-    trigger('expandNav', [
-      transition(':enter', [
-        style({
-          width: '200px',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          borderRadius: '9999px',
-          opacity: 0,
-        }),
-        animate(
-          '600ms cubic-bezier(0.4, 0, 0.2, 1)',
-          style({
-            width: '*',
-            marginLeft: 0,
-            marginRight: 0,
-            borderRadius: 0,
-            opacity: 1,
-          })
-        ),
-      ]),
-    ]),
-  ],
   styleUrl: './navbar.scss',
+  imports: [TranslatePipe]
 })
 export class Navbar {
    isMenuOpen = false;
+   private translate = inject(TranslateService);
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -38,6 +18,12 @@ export class Navbar {
 
   closeMenu() {
     this.isMenuOpen = false;
+  }
+
+  changeLang(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    const lang = selectElement.value;
+    this.translate.use(lang);
   }
 
 }
