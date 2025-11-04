@@ -4,36 +4,29 @@
   <!-- Left Section -->
   <div class="md:w-1/2 space-y-6 text-center md:text-left">
     <h1 class="text-3xl md:text-4xl font-semibold leading-snug text-gray-800">
-      {{"home_message" | translate}}
+      {{ 'home_message' | translate }}
     </h1>
   </div>
 
   <!-- Right Section -->
-  <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center items-center relative h-80 w-full md:w-[400px]">
-    @for (card of cards; track $index) {
-      @if ($index == currentIndex) {
-        <div
-          class="absolute w-72 bg-white shadow-lg rounded-2xl border border-gray-100 overflow-hidden transition-all duration-500 transform scale-y-110 z-10"
-        >
-          <img
-            [src]="card.image"
-            [alt]="card.title"
-            class="w-full h-40 object-cover"
-          />
-          <div class="p-4 text-center">
-            <h3 class="text-lg font-medium text-gray-700">
-              {{ card.title }}
-            </h3>
-          </div>
-        </div>
+  <div
+    class="md:w-1/2 mt-10 md:mt-0 flex justify-center items-center relative h-80 w-full md:w-[400px]"
+  >
+    @for (card of cards; track $index) { @if ($index == currentIndex) {
+    <div
+      class="absolute w-72 bg-white shadow-lg rounded-2xl border border-gray-100 overflow-hidden transition-all duration-500 transform scale-y-110 z-10"
+    >
+      <img [src]="card.image" [alt]="card.title" class="w-full h-40 object-cover" />
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-medium text-gray-700">
+          {{ card.title }}
+        </h3>
+      </div>
+    </div>
     <div
       class="absolute w-72 bg-white shadow-lg rounded-2xl border border-gray-100 overflow-hidden transition-all duration-500"
     >
-      <img
-        [src]="card.image"
-        [alt]="card.title"
-        class="w-full h-40 object-cover"
-      />
+      <img [src]="card.image" [alt]="card.title" class="w-full h-40 object-cover" />
       <div class="p-4 text-center">
         <h3 class="text-lg font-medium text-gray-700">
           {{ card.title }}
@@ -42,4 +35,33 @@
     </div>
     }}
   </div>
+</section>
+<section
+  class="min-h-screen px-8 md:px-16 lg:px-32 pt-28 bg-gray-50 w-full"
+>
+  <h3 class="text-2xl font-semibold text-center w-full my-4">
+    {{ 'home.service.title' | translate }}
+  </h3>
+  <div class="flex-row sm:flex items-center justify-center w-full gap-4 sm:gap-16">
+    @for (service of bitServices; track $index) {
+    <bit-service-card [bitService]="service" />
+    }
+  </div>
+  <h3 class="text-2xl font-semibold text-center w-full my-4 sm:my-12">
+    {{ 'home.service.why' | translate }}
+  </h3>
+  <ul class="w-full flex flex-wrap">
+    <li>
+      {{"home.service.fully_customized" | translate }}
+    </li>
+    <li>
+      {{"home.service.timely_delivery" | translate}}
+    </li>
+    <li>
+      {{"home.service.online_offline" | translate}}
+    </li>
+    <li>
+      {{"home.service.standardized" | translate }}
+    </li>
+  </ul>
 </section>

@@ -3,5 +3,15 @@
   "About_us": "About Us",
   "Contact_us": "Contact Us",
   "Products": "Products",
-  "home_message": "What does your business want a computer program to do so that you can concentrate on the core business work?"
+  "home_message": "What does your business want a computer program to do so that you can concentrate on the core business work?",
+  "home" : {
+    "service" : {
+      "title": "Here are our services for your business",
+      "why": "Why Our Services?",
+      "fully_customized": "Fully Customized to your business need exactly.",
+      "timely_delivery": "Get what you want on time.",
+      "online_offline": "Online connected, Offline or hybrid options.",
+      "standardized" : "Multi devices friendly, dark and light, well translated into your language."
+    }
+  }
 }

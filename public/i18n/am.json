@@ -3,5 +3,15 @@
   "About_us": "ስለ እኛ",
   "Contact_us": "አግኙን",
   "Products": "ምርቶች",
-  "home_message": "የንግድዎ ኮምፒውተር ፕሮግራም ምን እንደሚያደርግ እንደሚፈልጉ እንዴት ነው በዋና የንግድ ሥራ ላይ ለመተካት?"
+  "home_message": "የንግድዎ ኮምፒውተር ፕሮግራም ምን እንደሚያደርግ እንደሚፈልጉ እንዴት ነው በዋና የንግድ ሥራ ላይ ለመተካት?",
+  "home" : {
+    "service": {
+      "title": "Here are our services for your business",
+      "why": "why our services in amharic",
+      "fully_customized": "Fully Customized to your business need exactly. in Amharic",
+      "timely_delivery": "Get what you want on time. in Amharic",
+      "online_offline": "Online connected, Offline or hybrid options. in Amharic",
+      "standardized" : "Multi devices friendly, dark and light, well translated into your language. in Amharic"
+    }
+  }
 }
