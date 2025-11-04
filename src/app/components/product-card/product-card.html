@@ -1,0 +1,13 @@
+<div class="w-72 shadow-lg rounded-2xl border border-gray-100 hover:scale-102 cursor-pointer">
+  <div class="p-3">
+    <h3 class="text-lg font-medium text-gray-700 truncate">
+      {{ project().title }}
+    </h3>
+  </div>
+    <img [src]="project().image" [alt]="project().title" class="w-full h-40 object-cover">
+  <div>
+    <h3 class="text-md font-sm text-gray-600 p-4">
+      {{ project().desc }}
+    </h3>
+  </div>
+</div>

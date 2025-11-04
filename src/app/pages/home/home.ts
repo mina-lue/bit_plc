@@ -2,10 +2,11 @@ import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ServiceCard } from "../../components/service-card/service-card";
+import { ProductCard } from "../../components/product-card/product-card";
 
 @Component({
   selector: 'bit-home',
-  imports: [CommonModule, TranslatePipe, ServiceCard],
+  imports: [CommonModule, TranslatePipe, ServiceCard, ProductCard],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
@@ -49,6 +50,32 @@ export class Home implements OnInit {
     }
   ];
 
+  products = [
+    {
+      title: 'Bit School Pay',
+      desc: "school fee payment application",
+      image: '/bit.png',
+      id: "school_pay"
+    },
+    {
+      title: 'Bit Vehicles',
+      desc: "site for car market information",
+      image: '/bit.png',
+      id: "vehicles"
+    },
+    {
+      title: 'Kuta marketplace',
+      desc: "marketplace for clothes in Ethiopia",
+      image: '/bit.png',
+      id: "kuta"
+    },
+    {
+      title: 'Desalegn Factory inventory app',
+      desc: "Inventory application for cement based factory",
+      image: '/bit.png',
+      id: "web"
+    }
+  ];
   currentIndex = 0;
 
   ngOnInit(): void {
