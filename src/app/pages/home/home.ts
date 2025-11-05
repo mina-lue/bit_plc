@@ -28,7 +28,7 @@ export class Home implements OnInit {
       image: '/bit.png',
     },
     {
-      title: 'School',
+      title: 'E-commerce web application',
       image: '/bit.png',
     }
   ];

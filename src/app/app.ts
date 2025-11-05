@@ -5,10 +5,11 @@ import { Home } from "./pages/home/home";
 import {
     TranslateService,
 } from "@ngx-translate/core";
+import { Footer } from "./components/footer/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, CommonModule, Home],
+  imports: [Navbar, CommonModule, Home, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

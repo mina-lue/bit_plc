@@ -1,22 +1,48 @@
 {
   "BIT_PLC": "BIT PLC",
-  "home_motto": "We build precise solutions for your business needs. in Amharic",
+  "home_motto": "ለንግድዎ ፍላጎቶች ትክክለኛ መፍትሄዎችን እናገነባለን።",
   "Services": "አገልግሎቶች ",
   "About_us": "ስለ እኛ",
   "Contact_us": "አግኙን",
   "Products": "ምርቶች",
-  "home_message": "የንግድዎ ኮምፒውተር ፕሮግራም ምን እንደሚያደርግ እንደሚፈልጉ እንዴት ነው በዋና የንግድ ሥራ ላይ ለመተካት?",
-  "home" : {
+  "home_message": "ንግድዎ ከእርስዎ ጭነቶችን ለማስወገድ ኮምፒውተሮች ሊያስፈልጉዎ ይችላሉ! ንግድዎን አንጠብቁ፤ BIT የንግድ እትግት ስርዓቶችን ከእርስዎ ይጠብቃል።",
+  "you_need": "እነዚህ ሊያስፈልጉዎ ይችላሉ።",
+  "Inventory Management Application":"የእቃ አስተዳደር መተግበሪያ",
+  "Attendance and Payroll System": "የመገኘት እና የደመወዝ ስርዓት",
+  "School Management Dashboard": "የትምህርት ቤት አስተዳደር ዳሽቦርድ",
+  "E-commerce web application": "የኢኮመርስ ድር መተግበሪያ",
+  "Bit School Pay": "ቢት ስኩል ፔይ",
+  "school fee payment application": "የትምህርት ቤት ተከፋይ መተግበሪያ",
+  "Bit Vehicles": "ቢት ቪክልስ",
+  "site for car market information": "የመኪና ገበያ መረጃ ጣቢያ",
+  "Kuta marketplace": "ኩታ ገበያ",
+  "marketplace for clothes in Ethiopia": "በኢትዮጵያ የልብስ ገበያ መድረክ",
+  "Desalegn Factory inventory app": "የደሳለኝ ፋብሪካ እቃ አስተዳደር መተግበሪያ",
+  "Inventory application for cement based factory": "ለሲሚንቶ የተመሰረተ ፋብሪካ የእቃ አስተዳደር መተግበሪያ",
+  "some description about the application": "ስለ መተግበሪያው አንዳንድ መግለጫ",
+  "Landing and listing site": "የመግቢያ እና የዝርዝር ጣቢያ",
+  "Custom website development": "የተስተካከለ ድር ጣቢያ ልማት",
+  "home": {
     "service": {
-      "title": "Here are our services for your business in Amharic",
-      "why": "why our services in amharic",
-      "fully_customized": "Fully Customized to your business need exactly. in Amharic",
-      "timely_delivery": "Get what you want on time. in Amharic",
-      "online_offline": "Online connected, Offline or hybrid options. in Amharic",
-      "standardized" : "Multi devices friendly, dark and light, well translated into your language. in Amharic"
+      "title": "እነዚህ ለንግድዎ የምንሰጣቸው አገልግሎቶች ናቸው",
+      "why": "እኛን ሲመርጡ",
+      "fully_customized": "በፍጹም ተስተካክለው የተዘጋጀ መፍትሄዎች",
+      "fully_customized_detail1": "በትክክለኛው የሥራ እርምጃዎ መሠረት የተሰራ",
+      "fully_customized_detail2": "ከንግድዎ ጋር የሚያድግ እና የሚያሻሻል",
+      "fully_customized_detail3": "በእርስዎ ግብዣ እና አስተያየት መሠረት የተገነባ",
+      "timely_delivery": "በጊዜ ላይ መድረስ",
+      "timely_delivery_detail1": "ሁልጊዜ በተወሰነው ጊዜ የሚደርስ",
+      "timely_delivery_detail2": "በአገዳዊ የእድገት ዘዴ እና በቀጣይ አዘምንት የሚቀርብ",
+      "online_offline": "መስመር ላይ እና ከመስመር ውጭ ችሎታዎች",
+      "online_offline_detail1": "የድር፣ ዴስክቶፕ እና ሞባይል ድጋፍ",
+      "online_offline_detail2": "እንኳን ያለ ኢንተርኔት የሚሰራ",
+      "online_offline_detail3": "ቀላል እና የተስማሚ የውሂብ መዋሃድ",
+      "standardized": "የተደረገ እና የታመነ መፍትሄ",
+      "standardized_detail1": "በኢንዱስትሪ መደበኛ መርሆዎች የተመሠረተ",
+      "standardized_detail2": "ደህንነቱ የተጠበቀ እና በመደበኛ መልኩ የሚያስፈፅም"
     },
     "portfolio": {
-      "title": "delivered products; Our portfolio in Amharic"
+      "title": "የተደረሱ ምርቶች፤ የእኛ ፖርትፎሊዮ"
     }
   }
 }

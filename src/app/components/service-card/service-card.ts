@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'bit-service-card',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './service-card.html',
   styleUrl: './service-card.scss',
 })
