@@ -25,6 +25,10 @@ export class Home implements OnInit {
       title: 'School Management Dashboard',
       image: '/bit.png',
     },
+    {
+      title: 'School',
+      image: '/bit.png',
+    }
   ];
 
   bitServices = [
@@ -39,7 +43,7 @@ export class Home implements OnInit {
       image: '/bit.png',
     },
     {
-      title: 'School Management Dashboard',
+      title: 'Landing and listing site',
       desc: "some description about the application",
       image: '/bit.png',
     },
@@ -54,7 +58,7 @@ export class Home implements OnInit {
     {
       title: 'Bit School Pay',
       desc: "school fee payment application",
-      image: '/bit.png',
+      image: '/school_pay.jpg',
       id: "school_pay"
     },
     {
@@ -66,13 +70,13 @@ export class Home implements OnInit {
     {
       title: 'Kuta marketplace',
       desc: "marketplace for clothes in Ethiopia",
-      image: '/bit.png',
+      image: '/kuta.png',
       id: "kuta"
     },
     {
       title: 'Desalegn Factory inventory app',
       desc: "Inventory application for cement based factory",
-      image: '/bit.png',
+      image: '/inventory.png',
       id: "web"
     }
   ];
@@ -81,7 +85,59 @@ export class Home implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.cards.length;
-    }, 2000);
+    }, 5000);
+  }
+
+
+  getCardStyle(index: number) {
+    const total = this.cards.length;
+    const diff = (index - this.currentIndex + total) % total;
+
+    // compute relative position (0 = center, 1 = right, total-1 = left)
+    let transform = '';
+    let opacity = 0;
+    let zIndex = 0;
+    let scale = 0.8;
+
+    if (diff === 0) {
+      // center
+      transform = 'translateX(0) scale(1.1)';
+      opacity = 1;
+      zIndex = 30;
+    } else if (diff === 1) {
+      // right
+      transform = 'translateX(-220px) scale(0.9)';
+      opacity = 0.6;
+      zIndex = 20;
+    } else if (diff === total - 1) {
+      // left
+      transform = 'translateX(220px) scale(0.9)';
+      opacity = 0.6;
+      zIndex = 20;
+    } else {
+      // hidden but keeps loop continuity
+      transform = diff < total / 2 ? 'translateX(400px)' : 'translateX(-400px)';
+      opacity = 0;
+      zIndex = 0;
+    }
+
+    return {
+      transform,
+      opacity: opacity.toString(),
+      'z-index': zIndex.toString(),
+      transition: 'all 0.7s ease-in-out',
+    };
+  }
+
+  getCardPosition(index: number): string {
+    const leftIndex =
+      (this.currentIndex - 1 + this.cards.length) % this.cards.length;
+    const rightIndex = (this.currentIndex + 1) % this.cards.length;
+
+    if (index === this.currentIndex) return 'z-20';
+    if (index === leftIndex) return 'z-10';
+    if (index === rightIndex) return 'z-10';
+    return 'hidden'; // hide others
   }
 
 }

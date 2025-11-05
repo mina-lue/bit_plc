@@ -1,44 +1,136 @@
 <section
-  class="min-h-screen flex flex-col md:flex-row items-center justify-between px-8 md:px-16 lg:px-32 pt-28 bg-gray-50"
+  class="min-h-screen flex flex-col md:flex-row items-center justify-between px-8 md:px-16 lg:px-12 pt-28 bg-gray-50"
 >
   <!-- Left Section -->
-  <div class="md:w-1/2 space-y-6 text-center md:text-left">
+  <div class="md:w-1/2 flex flex-col space-y-6 text-center justify-between items-center w-full">
+    <div class="mb-4 flex flex-col items-center justify-center">
+      <img src="/bit.png" alt="logo" class="w-50 w-50 rounded-full" />
+      <h2 class="font-semibold text-3xl">{{ 'BIT_PLC' | translate }}</h2>
+      <p class="text-gray-600 mt-2">{{ 'home_motto' | translate }}</p>
+    </div>
     <h1 class="text-3xl md:text-4xl font-semibold leading-snug text-gray-800">
       {{ 'home_message' | translate }}
     </h1>
+    <ul class="flex gap-6 bg-slate-500 p-2 w-fit rounded">
+      <!-- Phone -->
+      <li>
+        <a href="tel:+251710208817" aria-label="Phone" class="hover:text-green-600 transition">
+          <svg
+            class="w-8 h-8"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.1 10.81 19.79 19.79 0 0 1 0 2.18 2 2 0 0 1 2.05 0h3a2 2 0 0 1 2 1.72c.13.9.38 1.78.72 2.63a2 2 0 0 1-.45 2.11L6 7.91a16 16 0 0 0 10.1 10.1l1.45-1.32a2 2 0 0 1 2.11-.45c.85.34 1.73.59 2.63.72a2 2 0 0 1 1.71 2.05z"
+            />
+          </svg>
+        </a>
+      </li>
+
+      <!-- Email -->
+      <li>
+        <a
+          href="mailto:meseminalu@gmail.com"
+          aria-label="Email"
+          class="hover:text-white transition"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"
+            />
+          </svg>
+        </a>
+      </li>
+
+      <!-- WhatsApp -->
+      <li>
+        <a
+          href="https://wa.me/251710208817"
+          target="_blank"
+          aria-label="WhatsApp"
+          class="hover:text-green-500 transition"
+        >
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M20.52 3.48A11.91 11.91 0 0012 0C5.37 0 0 5.37 0 12a11.91 11.91 0 002.17 6.87L0 24l5.25-2.17A11.91 11.91 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.18-3.48-8.52zM12 22.05c-2.13 0-4.17-.56-5.97-1.62l-.43-.25-3.13 1.3 1.3-3.13-.25-.43A10.05 10.05 0 012 12c0-5.51 4.49-10 10-10s10 4.49 10 10-4.49 10-10 10zm5.34-7.42c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.15s-.74.93-.9 1.12c-.17.19-.33.21-.62.07-.29-.15-1.22-.45-2.32-1.44-.86-.77-1.44-1.7-1.61-1.98-.17-.29-.02-.45.13-.59.13-.13.29-.33.43-.49.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.08-.15-.64-1.55-.88-2.13-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.51.07-.78.36-.26.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.02c.15.19 2.06 3.15 5 4.42.7.3 1.25.48 1.68.61.7.22 1.34.19 1.85.12.57-.09 1.7-.69 1.94-1.35.24-.67.24-1.24.17-1.36-.08-.12-.26-.19-.55-.34z"
+            />
+          </svg>
+        </a>
+      </li>
+
+      <!-- Instagram -->
+      <li>
+        <a
+          href="https://www.instagram.com/bit_soft_official"
+          target="_blank"
+          aria-label="Instagram"
+          class="hover:text-orange-700 hover:transform hover:scale-120 transition"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"
+            />
+          </svg>
+        </a>
+      </li>
+
+      <!-- TikTok -->
+      <li>
+        <a
+          href="https://www.tiktok.com/@bit_soft"
+          target="_blank"
+          aria-label="TikTok"
+          class="hover:text-white transition"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.75 2a4.75 4.75 0 0 0 4.75 4.75 4.6 4.6 0 0 0 1.5-.25v3.09a7.94 7.94 0 0 1-3-.59v6.5a6 6 0 1 1-6-6c.25 0 .5 0 .75.03v2.94a3.08 3.08 0 1 0 3 3V2h-.25z"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
 
   <!-- Right Section -->
-  <div
-    class="md:w-1/2 mt-10 md:mt-0 flex justify-center items-center relative h-80 w-full md:w-[400px]"
-  >
-    @for (card of cards; track $index) { @if ($index == currentIndex) {
-    <div
-      class="absolute w-72 bg-white shadow-lg rounded-2xl border border-gray-100 overflow-hidden transition-all duration-500 transform scale-y-110 z-10"
-    >
-      <img [src]="card.image" [alt]="card.title" class="w-full h-40 object-cover" />
-      <div class="p-4 text-center">
-        <h3 class="text-lg font-medium text-gray-700">
-          {{ card.title }}
-        </h3>
+  <div class="w-full md:w-[600px] mx-8">
+    <h2 class="text-center text-2xl font-semibold">You may need ... </h2>
+    <div class="relative flex justify-center items-center w-full h-[350px] overflow-hidden">
+      @for (card of cards; track $index) {
+      <div
+        class="absolute transition-all duration-700 ease-in-out"
+        [ngStyle]="getCardStyle($index)"
+      >
+        <div
+          class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden w-64 md:w-72 transform transition-all duration-700"
+        >
+          <img [src]="card.image" [alt]="card.title" class="w-full h-40 object-cover" />
+          <div class="p-4 text-center">
+            <h3 class="text-lg font-semibold text-gray-700">{{ card.title }}</h3>
+          </div>
+        </div>
       </div>
+      }
     </div>
-    <div
-      class="absolute w-72 bg-white shadow-lg rounded-2xl border border-gray-100 overflow-hidden transition-all duration-500"
-    >
-      <img [src]="card.image" [alt]="card.title" class="w-full h-40 object-cover" />
-      <div class="p-4 text-center">
-        <h3 class="text-lg font-medium text-gray-700">
-          {{ card.title }}
-        </h3>
-      </div>
-    </div>
-    }}
   </div>
 </section>
-<section
-  class="min-h-screen px-8 md:px-16 lg:px-32 pt-28 bg-gray-50 w-full"
->
+<section class="min-h-screen px-8 md:px-16 lg:px-32 pt-28 bg-gray-50 w-full">
   <h3 class="text-2xl font-semibold text-center w-full my-4">
     {{ 'home.service.title' | translate }}
   </h3>
@@ -52,28 +144,26 @@
   </h3>
   <ul class="w-full flex flex-wrap">
     <li>
-      {{"home.service.fully_customized" | translate }}
+      {{ 'home.service.fully_customized' | translate }}
     </li>
     <li>
-      {{"home.service.timely_delivery" | translate}}
+      {{ 'home.service.timely_delivery' | translate }}
     </li>
     <li>
-      {{"home.service.online_offline" | translate}}
+      {{ 'home.service.online_offline' | translate }}
     </li>
     <li>
-      {{"home.service.standardized" | translate }}
+      {{ 'home.service.standardized' | translate }}
     </li>
   </ul>
 </section>
-<section
-  class="min-h-screen px-8 md:px-16 lg:px-32 pt-28 bg-gray-50 w-full"
->
- <h3 class="text-2xl font-semibold text-center w-full my-4">
+<section class="min-h-screen px-8 md:px-16 lg:px-32 pt-28 bg-gray-50 w-full">
+  <h3 class="text-2xl font-semibold text-center w-full my-4">
     {{ 'home.portfolio.title' | translate }}
   </h3>
   <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-12">
     @for (item of products; track $index) {
-      <bit-product-card [project]="item" />
+    <bit-product-card [project]="item" />
     }
   </div>
 </section>

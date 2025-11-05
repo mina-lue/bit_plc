@@ -1,13 +1,15 @@
 {
+  "BIT_PLC": "BIT PLC",
+  "home_motto": "We build precise solutions for your business needs.",
   "Services": "Services",
   "About_us": "About Us",
   "Contact_us": "Contact Us",
   "Products": "Products",
-  "home_message": "What does your business want a computer program to do so that you can concentrate on the core business work?",
+  "home_message": "Your Business may need computers to take off some loads off you! Take care of your business, BIT will take care of business monitoring systems for you!",
   "home" : {
     "service" : {
       "title": "Here are our services for your business",
-      "why": "Why Our Services?",
+      "why": "Why Us?",
       "fully_customized": "Fully Customized to your business need exactly.",
       "timely_delivery": "Get what you want on time.",
       "online_offline": "Online connected, Offline or hybrid options.",
