@@ -11,7 +11,9 @@ import { ProductCard } from "../../components/product-card/product-card";
   styleUrl: './home.scss',
 })
 export class Home implements OnInit {
-  private translate = inject(TranslateService)
+  private translate = inject(TranslateService);
+  hoveredIndex: number | null = null;
+
    cards = [
     {
       title: 'Inventory Management Application',
@@ -85,7 +87,7 @@ export class Home implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.cards.length;
-    }, 5000);
+    }, 3000);
   }
 
 
@@ -139,5 +141,42 @@ export class Home implements OnInit {
     if (index === rightIndex) return 'z-10';
     return 'hidden'; // hide others
   }
+
+ advantages = [
+    {
+      title: 'home.service.fully_customized',
+      icon: 'custom',
+      details: [
+        'home.service.fully_customized_detail1',
+        'home.service.fully_customized_detail2',
+        'home.service.fully_customized_detail3',
+      ],
+    },
+    {
+      title: 'home.service.timely_delivery',
+      icon: 'clock',
+      details: [
+        'home.service.timely_delivery_detail1',
+        'home.service.timely_delivery_detail2',
+      ],
+    },
+    {
+      title: 'home.service.online_offline',
+      icon: 'network',
+      details: [
+        'home.service.online_offline_detail1',
+        'home.service.online_offline_detail2',
+        'home.service.online_offline_detail3',
+      ],
+    },
+    {
+      title: 'home.service.standardized',
+      icon: 'standard',
+      details: [
+        'home.service.standardized_detail1',
+        'home.service.standardized_detail2',
+      ],
+    },
+  ];
 
 }

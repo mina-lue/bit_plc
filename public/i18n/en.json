@@ -10,10 +10,23 @@
     "service" : {
       "title": "Here are our services for your business",
       "why": "Why Us?",
-      "fully_customized": "Fully Customized to your business need exactly.",
-      "timely_delivery": "Get what you want on time.",
-      "online_offline": "Online connected, Offline or hybrid options.",
-      "standardized" : "Multi devices friendly, dark and light, well translated into your language."
+      "fully_customized": "Fully Customized Solutions",
+      "fully_customized_detail1": "Tailored to your exact workflow",
+      "fully_customized_detail2": "Designed to grow with your business",
+      "fully_customized_detail3": "Built using your feedback",
+
+      "timely_delivery": "Timely Delivery",
+      "timely_delivery_detail1": "Always delivered on schedule",
+      "timely_delivery_detail2": "Agile development with regular updates",
+
+      "online_offline": "Online & Offline Capabilities",
+      "online_offline_detail1": "Web, desktop, and mobile support",
+      "online_offline_detail2": "Works even without internet",
+      "online_offline_detail3": "Seamless data synchronization",
+
+      "standardized": "Standardized & Reliable",
+      "standardized_detail1": "Built with industry standards",
+      "standardized_detail2": "Secure and scalable architecture"
     },
      "portfolio": {
       "title": "Delivered Products; Our Portfolio"

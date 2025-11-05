@@ -110,7 +110,7 @@
 
   <!-- Right Section -->
   <div class="w-full md:w-[600px] mx-8">
-    <h2 class="text-center text-2xl font-semibold">You may need ... </h2>
+    <h2 class="text-center text-2xl font-semibold">You may need ...</h2>
     <div class="relative flex justify-center items-center w-full h-[350px] overflow-hidden">
       @for (card of cards; track $index) {
       <div
@@ -130,7 +130,7 @@
     </div>
   </div>
 </section>
-<section class="min-h-screen px-8 md:px-16 lg:px-32 pt-28 bg-gray-50 w-full">
+<section class="min-h-screen px-8 md:px-16 lg:px-32 pt-28 bg-gray-50 w-full flex flex-col justify-between items-center md:py-12">
   <h3 class="text-2xl font-semibold text-center w-full my-4">
     {{ 'home.service.title' | translate }}
   </h3>
@@ -142,20 +142,99 @@
   <h3 class="text-2xl font-semibold text-center w-full my-4 sm:my-12">
     {{ 'home.service.why' | translate }}
   </h3>
-  <ul class="w-full flex flex-wrap">
-    <li>
-      {{ 'home.service.fully_customized' | translate }}
+  <div class="md:h-[100px] flex items-center justify-center w-full">
+  <ul class="flex flex-wrap items-center justify-center gap-6 px-6 md:px-10">
+    @for (item of advantages; track $index) {
+    <li
+      (mouseenter)="hoveredIndex = $index"
+      (mouseleave)="hoveredIndex = null"
+      class="relative bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center justify-start transition-all duration-500 overflow-hidden cursor-pointer"
+      [class.shadow-lg]="hoveredIndex === $index"
+      [class.scale-105]="hoveredIndex === $index"
+    >
+      <!-- Icon -->
+      <div
+        class="text-blue-600 mb-3 transition-transform duration-500"
+        [class.scale-110]="hoveredIndex === $index"
+      >
+        @switch (item.icon) { @case ('custom') {
+        <svg
+          class="w-10 h-10"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        } @case ('clock') {
+        <svg
+          class="w-10 h-10"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 6v6l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        } @case ('network') {
+        <svg
+          class="w-10 h-10"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3" />
+        </svg>
+        } @case ('standard') {
+        <svg
+          class="w-10 h-10"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 10h16M4 14h16M4 18h16"
+          />
+        </svg>
+        } }
+      </div>
+
+      <!-- Title -->
+      <h3
+        class="text-gray-800 font-semibold text-center mb-2 transition-transform duration-300"
+        [class.translate-y-[-4px]]="hoveredIndex === $index"
+      >
+        {{ item.title | translate }}
+      </h3>
+
+      <!-- Description: Only show on hover -->
+      <ul
+        class="mt-2 text-sm text-gray-600 space-y-1 transition-all duration-500 ease-in-out overflow-hidden"
+        [class.opacity-100]="hoveredIndex === $index"
+        [class.opacity-0]="hoveredIndex !== $index"
+        [class.max-h-48]="hoveredIndex === $index"
+        [class.max-h-0]="hoveredIndex !== $index"
+      >
+        @for (desc of item.details; track desc) {
+        <li class="flex items-start gap-2">
+          ✅
+          <span>{{ desc | translate }}</span>
+        </li>
+        }
+      </ul>
     </li>
-    <li>
-      {{ 'home.service.timely_delivery' | translate }}
-    </li>
-    <li>
-      {{ 'home.service.online_offline' | translate }}
-    </li>
-    <li>
-      {{ 'home.service.standardized' | translate }}
-    </li>
+    }
   </ul>
+  </div>
 </section>
 <section class="min-h-screen px-8 md:px-16 lg:px-32 pt-28 bg-gray-50 w-full">
   <h3 class="text-2xl font-semibold text-center w-full my-4">
