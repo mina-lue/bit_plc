@@ -1,5 +1,5 @@
 {
-  "name": "bit-plc",
+  "name": "bit-site",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:bit-plc": "node dist/bit-plc/server/server.mjs"
+    "serve:ssr:bit-site": "node dist/bit-site/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -23,7 +23,6 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^20.3.9",
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
     "@angular/core": "^20.3.0",
@@ -34,11 +33,11 @@
     "@angular/ssr": "^20.3.8",
     "@ngx-translate/core": "^17.0.0",
     "@ngx-translate/http-loader": "^17.0.0",
-    "@tailwindcss/postcss": "^4.1.16",
+    "@tailwindcss/postcss": "^4.1.17",
     "express": "^5.1.0",
     "postcss": "^8.5.6",
     "rxjs": "~7.8.0",
-    "tailwindcss": "^4.1.16",
+    "tailwindcss": "^4.1.17",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

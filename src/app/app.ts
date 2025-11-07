@@ -1,25 +1,14 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { Navbar } from "./components/navbar/navbar";
-import { CommonModule } from '@angular/common';
-import { Home } from "./pages/home/home";
-import {
-    TranslateService,
-} from "@ngx-translate/core";
 import { Footer } from "./components/footer/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, CommonModule, Home, Footer],
+  imports: [Navbar, RouterOutlet, Footer],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('bit-plc');
-  private translate = inject(TranslateService);
-
-    constructor() {
-        this.translate.addLangs(['am', 'en']);
-        this.translate.setFallbackLang('am');
-        this.translate.use('am');
-    }
+  protected readonly title = signal('bit-site');
 }

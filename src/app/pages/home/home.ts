@@ -1,6 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { ServiceCard } from "../../components/service-card/service-card";
 import { ProductCard } from "../../components/product-card/product-card";
 
@@ -11,8 +11,7 @@ import { ProductCard } from "../../components/product-card/product-card";
   templateUrl: './home.html',
   styleUrls: ['./home.scss'],
 })
-export class Home implements OnInit {
-  private translate = inject(TranslateService);
+export class HomePage implements OnInit {
   hoveredIndex: number | null = null;
 
    cards = [
