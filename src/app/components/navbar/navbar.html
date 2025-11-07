@@ -1,5 +1,5 @@
 <header class="fixed top-0 left-0 w-full z-50 bg-white/60 backdrop-blur-sm shadow-sm">
-  <nav class=" mx-auto flex items-center justify-between sm:px-12 px-4 py-4">
+  <nav class="mx-auto flex items-center justify-between sm:px-12 px-4 py-4">
     <!-- Logo -->
     <div
       class="text-2xl font-bold tracking-tight text-gray-800 cursor-pointer flex justify-center items-center gap-2"
@@ -11,35 +11,48 @@
     <!-- Desktop Links -->
     <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
       <li>
-        <a routerLink="/services" class="hover:text-blue-600 transition-colors cursor-pointer">{{
-          'Services' | translate
-        }}</a>
+        <a
+          routerLink="/services"
+          routerLinkActive="text-blue-600"
+          class="hover:text-blue-600 transition-colors"
+        >
+          {{ 'Services' | translate }}
+        </a>
       </li>
       <li>
-        <a routerLink="/products" class="hover:text-blue-600 transition-colors cursor-pointer">{{
-          'Products' | translate
-        }}</a>
+        <a
+          routerLink="/products"
+          routerLinkActive="text-blue-600"
+          class="hover:text-blue-600 transition-colors"
+        >
+          {{ 'Products' | translate }}
+        </a>
       </li>
       <li>
-        <a routerLink="/about" class="hover:text-blue-600 transition-colors cursor-pointer">{{
-          'About_us' | translate
-        }}</a>
+        <a
+          routerLink="/about"
+          routerLinkActive="text-blue-600"
+          class="hover:text-blue-600 transition-colors"
+        >
+          {{ 'About_us' | translate }}
+        </a>
       </li>
       <li>
-        <a routerLink="/contact" class="hover:text-blue-600 transition-colors cursor-pointer">{{
-          'Contact_us' | translate
-        }}</a>
-      </li>
-      <li>
-        <select (change)="changeLang($event)" class="border rounded p-1">
-          <option value="en">English</option>
-          <option value="am">አማርኛ</option>
-        </select>
+        <a
+          routerLink="/contact"
+          routerLinkActive="text-blue-600"
+          class="hover:text-blue-600 transition-colors"
+        >
+          {{ 'Contact_us' | translate }}
+        </a>
       </li>
     </ul>
 
     <!-- Mobile Menu Button -->
-    <button class="md:hidden text-gray-800 focus:outline-none cursor-pointer hover:text-blue-600" (click)="toggleMenu()">
+    <button
+      class="md:hidden text-gray-800 focus:outline-none cursor-pointer hover:text-blue-600"
+      (click)="toggleMenu()"
+    >
       @if(!isMenuOpen) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -72,6 +85,11 @@
       </svg>
       }
     </button>
+
+    <select (change)="changeLang($event)" class="hidden md:flex border rounded p-1">
+      <option value="am">አማርኛ</option>
+      <option value="en">English</option>
+    </select>
   </nav>
 
   <!-- Mobile Dropdown -->
@@ -79,14 +97,20 @@
   <div class="md:hidden bg-white border-t border-gray-100 shadow-md">
     <ul class="flex flex-col space-y-3 px-6 py-4 text-gray-700 font-medium">
       <li>
-        <a routerLink="/services" class="hover:text-blue-600 cursor-pointer" (click)="closeMenu()">{{
-          'Services' | translate
-        }}</a>
+        <a
+          routerLink="/services"
+          class="hover:text-blue-600 cursor-pointer"
+          (click)="closeMenu()"
+          >{{ 'Services' | translate }}</a
+        >
       </li>
       <li>
-        <a routerLink="/products" class="hover:text-blue-600 cursor-pointer" (click)="closeMenu()">{{
-          'Products' | translate
-        }}</a>
+        <a
+          routerLink="/products"
+          class="hover:text-blue-600 cursor-pointer"
+          (click)="closeMenu()"
+          >{{ 'Products' | translate }}</a
+        >
       </li>
       <li>
         <a routerLink="/about" class="hover:text-blue-600 cursor-pointer" (click)="closeMenu()">{{
@@ -100,8 +124,8 @@
       </li>
       <li>
         <select (change)="changeLang($event)" class="border rounded p-1">
-          <option value="en">English</option>
           <option value="am">አማርኛ</option>
+          <option value="en">English</option>
         </select>
       </li>
     </ul>

@@ -1,16 +1,17 @@
 import { Component, inject } from '@angular/core';
-import { trigger, style, animate, transition } from '@angular/animations';
+import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'bit-navbar',
+  standalone: true,
   templateUrl: './navbar.html',
-  styleUrl: './navbar.scss',
-  imports: [TranslatePipe]
+  styleUrls: ['./navbar.scss'],
+  imports: [CommonModule, TranslatePipe],
 })
 export class Navbar {
-   isMenuOpen = false;
-   private translate = inject(TranslateService);
+  isMenuOpen = false;
+  private translate = inject(TranslateService);
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -25,5 +26,4 @@ export class Navbar {
     const lang = selectElement.value;
     this.translate.use(lang);
   }
-
 }

@@ -18,8 +18,8 @@ export class App {
   private translate = inject(TranslateService);
 
     constructor() {
-        this.translate.addLangs(['de', 'en']);
-        this.translate.setFallbackLang('en');
-        this.translate.use('en');
+        this.translate.addLangs(['am', 'en']);
+        this.translate.setFallbackLang('am');
+        this.translate.use('am');
     }
 }

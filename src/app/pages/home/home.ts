@@ -6,9 +6,10 @@ import { ProductCard } from "../../components/product-card/product-card";
 
 @Component({
   selector: 'bit-home',
+  standalone: true,
   imports: [CommonModule, TranslatePipe, ServiceCard, ProductCard],
   templateUrl: './home.html',
-  styleUrl: './home.scss',
+  styleUrls: ['./home.scss'],
 })
 export class Home implements OnInit {
   private translate = inject(TranslateService);

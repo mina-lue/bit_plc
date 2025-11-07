@@ -2,7 +2,11 @@ import { BootstrapContext, bootstrapApplication } from '@angular/platform-browse
 import { App } from './app/app';
 import { config } from './app/app.config.server';
 
-const bootstrap = (context: BootstrapContext) =>
-    bootstrapApplication(App, config, context);
-
-export default bootstrap;
+export default async function bootstrap(context?: BootstrapContext) {
+  try {
+    return await bootstrapApplication(App, config, context);
+  } catch (err) {
+    console.error('SSR bootstrap error:', err);
+    throw err;
+  }
+}

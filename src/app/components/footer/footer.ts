@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'bit-footer',
+  standalone: true,
   imports: [],
   templateUrl: './footer.html',
   styleUrl: './footer.scss',

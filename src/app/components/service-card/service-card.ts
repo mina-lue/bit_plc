@@ -3,6 +3,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'bit-service-card',
+  standalone: true,
   imports: [TranslatePipe],
   templateUrl: './service-card.html',
   styleUrl: './service-card.scss',
